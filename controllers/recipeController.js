@@ -21,3 +21,16 @@ exports.getWishlist = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve wishlist' });
   }
 };
+
+exports.deleteFromWishlist = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedRecipe = await Recipe.findByIdAndDelete(id);
+    if (!deletedRecipe) {
+      return res.status(404).json({ error: 'Recipe not found' });
+    }
+    res.status(200).json({ message: 'Recipe deleted from wishlist' });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to delete recipe from wishlist' });
+  }
+};
