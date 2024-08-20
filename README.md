@@ -1,1 +1,2 @@
-![erd diagram](https://github.com/user-attachments/assets/b1d3e9ca-1941-49a6-8581-a2c0ec77c002)
+
+![recipe_erd diagram](https://github.com/user-attachments/assets/78b907e1-2680-4162-b303-b79030eae08a)
